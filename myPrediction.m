@@ -8,9 +8,9 @@ function detected = myPrediction(testImage,sceneFeatures,nFaces)
 
 fcnHandle = @(x) detectFASTFeatures(x,...
 	'MinQuality',0.025,...
-	'MinContrast',0.025); %#ok
-extractorMethod = 'SURF'; %#ok
-metric = 'SAD'; %#ok
+	'MinContrast',0.025); 
+extractorMethod = 'SURF'; 
+metric = 'SAD'; 
 % adjustHistograms = false;
 % if adjustHistograms
 % 	testImage = histeq(testImage);
