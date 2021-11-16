@@ -44,13 +44,6 @@ s = strtrim(s);
 % Form the desired regular expression from maxchars.
 exp = sprintf('(\\S\\S{%d,}|.{1,%d})(?:\\s+|$)', maxchars, maxchars);
 
-% Interpretation of regular expression (for maxchars = 80):
-% '(\\S\\S{80,}|.{1,80})(?:\\s+|$)'
-%
-% Match either a non-whitespace character followed by 80 or more
-% non-whitespace characters, OR any sequence of between 1 and 80
-% characters; all followed by either one or more whitespace characters OR
-% end-of-line.
 
 tokens = regexp(s, exp, 'tokens').';
 
